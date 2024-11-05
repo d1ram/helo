@@ -3,7 +3,7 @@ from tkinter import messagebox
 import fitz  # PyMuPDF
 from PIL import Image, ImageTk
 import os
-
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> В DEF LOAD_PDFS В FOLDER_PATH СОЗДАЙ ЛЮБУЮ ПАПКУ И ЗАКАЧАЙ ТУДА ПДФОК, ИНАЧЕ У ТЕБЯ ОНИ НЕ ЗАГРУЗЯТСЯ<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 class PDFViewer:
     def __init__(self, master):
         self.master = master
@@ -26,6 +26,7 @@ class PDFViewer:
 
 
     def load_pdfs(self):
+        #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>СЮДА<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
         folder_path = r"C:\Users\User\Desktop\vanya\PDF"  # Укажите свой путь
         if os.path.exists(folder_path):
             self.pdf_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.pdf')]
