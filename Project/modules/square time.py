@@ -1,5 +1,9 @@
 import tkinter as tk
 from datetime import datetime
+import locale
+
+# Устанавливаем локаль для русского языка
+locale.setlocale(locale.LC_TIME, 'ru_RU.UTF-8')
 
 class SquareApp:
     def __init__(self, master):
@@ -25,7 +29,6 @@ class SquareApp:
         self.canvas = tk.Canvas(self.master, width=1920, height=1080, bg="white")
         self.canvas.pack()
         
-
         # Задаем координаты для размещения квадрата
         self.x1, self.y1 = x1, y1  # Верхний левый угол
         self.x2, self.y2 = x2, y2  # Нижний правый угол
