@@ -1,4 +1,14 @@
-import tkinter as tk 
+import tkinter as tk
+
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Бинды<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+def toggle_fullscreen(root ,event = None) :
+    is_fullscreen = root.attributes('-fullscreen')
+    root.attributes('-fullscreen', not is_fullscreen)
+
+def exit(root ,event = None):
+    root.quit()
+
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Rows n Columns<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 def make_row_column(root) :
     #rows
     root.grid_rowconfigure(0, minsize=20)
@@ -15,3 +25,4 @@ def make_row_column(root) :
     root.grid_columnconfigure(3, minsize=600)
     root.grid_columnconfigure(4, minsize=200)
     root.grid_columnconfigure(5, minsize=20)
+
